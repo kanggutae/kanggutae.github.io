@@ -107,9 +107,7 @@ function initialize()
 	// setup markerRoots
 	////////////////////////////////////////////////////////////
 
-	// build markerControls
-	markerRoot1 = new THREE.Group();
-	scene.add(markerRoot1);
+	
 	function onProgress(xhr) { console.log( (xhr.loaded / xhr.total * 100) + '% loaded' ); }
 	function onError(xhr) { console.log( 'An error happened' ); }
 	
@@ -117,6 +115,9 @@ function initialize()
 
 	for(let i = 0; i < 2; i++)
 	{
+		// build markerControls
+		markerRoot1 = new THREE.Group();
+		scene.add(markerRoot1);
 		let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 			type: 'pattern', patternUrl: "../data/data/" + patternArray[i] + ".patt",
 		})
