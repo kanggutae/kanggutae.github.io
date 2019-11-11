@@ -29,7 +29,7 @@ var scene, camera, renderer, clock, deltaTime, totalTime;
 
 var arToolkitSource, arToolkitContext;
 
-var markerRoot1;
+//var markerRoot1;
 
 var mesh1;
 
@@ -116,7 +116,7 @@ function initialize()
 	for(let i = 0; i < 2; i++)
 	{
 		// build markerControls
-		markerRoot1 = new THREE.Group();
+		let markerRoot1 = new THREE.Group();
 		scene.add(markerRoot1);
 		let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 			type: 'pattern', patternUrl: "../data/data/" + patternArray[i] + ".patt",
