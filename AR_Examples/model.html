@@ -150,7 +150,7 @@ function initialize()
 		
 		let loader = new THREE.GLTFLoader();//.setPath('../models/' + patternArray[i] + '/');
 		loader.load("models/" + patternArray[i] + "/" + patternArray[i] + ".gltf",function (gltf){
-			scene.add(gltf.scene);
+			markerRoot1.add(gltf.scene);
 		},
 		
 		function ( xhr ) {
