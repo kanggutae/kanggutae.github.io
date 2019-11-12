@@ -148,8 +148,8 @@ function initialize()
 // 					}, onProgress, onError );
 // 			});
 		
-		let loader = new THREE.GLTFLoader().setPath('../models/' + patternArray[i] + '/');
-		loader.load('../models/' + patternArray[i] + '/' + patternArray[i] + '.gltf',function (gltf){
+		let gltfloader = new THREE.GLTFLoader().setPath('../models/' + patternArray[i] + '/');
+		gltfloader.load('../models/' + patternArray[i] + '/' + patternArray[i] + '.gltf',function (gltf){
 		
 			gltf.scene.traverse( function ( child ) {
 				if(child.isMesh)
