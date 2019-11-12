@@ -151,11 +151,6 @@ function initialize()
 		let loader = new THREE.GLTFLoader();//.setPath('../models/' + patternArray[i] + '/');
 		loader.load("models/" + patternArray[i] + "/" + patternArray[i] + ".gltf",function (gltf){
 			markerRoot1.add(gltf.scene);
-			//gltf.animations; // Array<THREE.AnimationClip>
-			//gltf.scene; // THREE.Scene
-			//gltf.scenes; // Array<THREE.Scene>
-			//gltf.cameras; // Array<THREE.Camera>
-			//gltf.asset; // Object
 		},
 		
 		function ( xhr ) {
