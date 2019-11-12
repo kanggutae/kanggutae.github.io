@@ -148,7 +148,7 @@ function initialize()
 // 					}, onProgress, onError );
 // 			});
 		
-		let gltfLoader = new THREE.GLTFLoader().setPath('../models/' + patternArray[i] + '/');
+		let gltfLoader = new THREE.GLTFLoader();
 		gltfLoader.load('../models/' + patternArray[i] + '/' + patternArray[i] + '.gltf',function (gltf){
 		
 			gltf.scene.traverse( function ( child ) {
