@@ -113,9 +113,9 @@ function initialize()
 	function onProgress(xhr) { console.log( (xhr.loaded / xhr.total * 100) + '% loaded' ); }
 	function onError(xhr) { console.log( 'An error happened' ); }
 	
-	let patternArray = ["whale","fish_white"];
+	let patternArray = ["whale"];
 
-	for(let i = 0; i < 2; i++)
+	for(let i = 0; i < patternArray.Length; i++)
 	{
 		// build markerControls
 		let markerRoot1 = new THREE.Group();
