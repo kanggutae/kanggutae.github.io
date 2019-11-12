@@ -148,8 +148,8 @@ function initialize()
 		//			}, onProgress, onError );
 		//	});
 		
-		let loader = new THREE.GLTFLoader();//.setPath('../models/' + patternArray[i] + '/');
-		loader.load("models/" + patternArray[i] + "/" + patternArray[i] + ".gltf",function (gltf){
+		let gltfLoader = new THREE.GLTFLoader();//.setPath('../models/' + patternArray[i] + '/');
+		gltfLoader.load("models/" + patternArray[i] + "/" + patternArray[i] + ".gltf", function ( gltf ) {
 			markerRoot1.add(gltf.scene);
 		},
 		
