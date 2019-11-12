@@ -148,19 +148,25 @@ function initialize()
 					}, onProgress, onError );
 			});
 		
-		//let gltfLoader = new THREE.GLTFLoader();//.setPath('../models/' + patternArray[i] + '/');
-		//gltfLoader.load("models/" + patternArray[i] + "/" + patternArray[i] + ".gltf", function ( gltf ) {
-		//	markerRoot1.add(gltf.scene);
-		//},
+		let loader = new THREE.GLTFLoader().setPath('../models/' + patternArray[i] + '/');
+		loader.load('../models/' + patternArray[i] + '/' + patternArray[i] + '.gltf',function (gltf){
 		
-		//function ( xhr ) {
-		//console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-		//},
+			gltf.scene.traverse( function ( child ) {
+				if(child.isMesh)
+					child.material.envMap = null;
+			});
+			
+			markerRoot1.add(gltf.scene);
+		},
 		
-		//function ( error ) {
-		//	console.log( 'An error happened' );
-		//}
-		//);
+		function ( xhr ) {
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+		},
+		
+		function ( error ) {
+			console.log( 'An error happened' );
+		}
+		);
 	}
 }
 
