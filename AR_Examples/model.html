@@ -151,10 +151,10 @@ function initialize()
 		let gltfLoader = new THREE.GLTFLoader();
 		gltfLoader.load('models/' + patternArray[i] + '/' + patternArray[i] + '.gltf',function (gltf){
 		
-			gltf.scene.traverse( function ( child ) {
-				if(child.isMesh)
-					child.material.envMap = null;
-			});
+// 			gltf.scene.traverse( function ( child ) {
+// 				if(child.isMesh)
+// 					child.material.envMap = null;
+// 			});
 			
 			markerRoot1.add(gltf.scene);
 		},
